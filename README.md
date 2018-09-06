@@ -9,6 +9,6 @@ The ESP8266 will start a new WiFi connection called "Beest XXXXXX". You should b
 
 Once the connection has been established, your phone should automatically load a browser which points to the right URL for the device but if it does not you can open a browser window and point towards http://beest.local/
 
-![alt text](https://github.com/msraynsford/WifiBeest/blob/master/WifiBeestBrowser.png "Browser Image")
+![alt text](https://github.com/msraynsford/WiFiBeest/blob/master/WiFiBeestBrowser.png "Browser Image")
 
 If you are still not able to load the page by typing the URL into the browser, it is possible to reach the right page by typing in the IP address http://192.168.4.1/
