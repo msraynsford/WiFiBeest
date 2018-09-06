@@ -1,7 +1,7 @@
 # WifiBeest
-Source code and assembly documents for my ESP32 controlled strandbeest
+Source code and assembly documents for my ESP8266 controlled strandbeest
 
-# Connecting to the buggy
+# Connecting to the strandbeest
 When the micro controller device is connected to a power supply via a usb cable (the kit does not have to be assembled to connect to the chip),
 The ESP8266 will start a new WiFi connection called "Beest XXXXXX". You should be able to find this network from your phone/laptop and connect to it using the password:'password'.
 
