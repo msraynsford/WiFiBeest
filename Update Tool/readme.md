@@ -1,4 +1,4 @@
-- The contents of this folder can be used to program the buggy without installing the arduino environment and associated libraries.
+- The contents of this folder can be used to program the device without installing the arduino environment and associated libraries.
 - ESPTool uploads pre-compiled images of the software and file system to the ESP device.
 - The batch file instructs ESPTool to upload two different images but it needs to be edited to point to the correct COM Port for the USB->Serial Device.
 
