@@ -75,7 +75,7 @@ class newServo: public Servo {
       if(value < -MAXVALUE) value = -MAXVALUE;
       
       //Map the +- 1000 range down to the servo microseconds
-      ms =  ((value * range) / MAXVALUE) + limits.zero;
+      ms =  limits.zero + (((value * range) / MAXVALUE) * limits.dir);
 
       //Limit the output ms
       if(ms < limits.min) ms = limits.min;

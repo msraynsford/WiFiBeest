@@ -9,6 +9,7 @@ class limits_t {
     uint16_t min = 960;
     uint16_t max = 2000;
     uint16_t zero = (MIN + MAX) / 2;
+    int8_t dir = 1;
 
     limits_t() {}
     

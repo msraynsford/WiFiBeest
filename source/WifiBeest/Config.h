@@ -49,6 +49,7 @@ void ResetConfig() {
   sprintf(config.pass, PASS_DEFAULT);
 
   for(byte id = 0; id < NUMSERVOS; id++) {
+    config.limits[id].dir = 1;
     config.limits[id].min = SERVO_MIN;
     config.limits[id].max = SERVO_MAX;
     config.limits[id].zero = (config.limits[id].min + config.limits[id].max) / 2;
@@ -110,7 +111,7 @@ void PrintConfig() {
   Serial.printf("Pass: '%s'\n", config.pass);
 
   for(byte id = 0; id < NUMSERVOS; id++) 
-    Serial.printf("Servos:%d, min:%d, zero:%d, max:%d\n", id, config.limits[id].min, config.limits[id].zero, config.limits[id].max);
+    Serial.printf("Servos:%d, min:%d, zero:%d, max:%d, dir:%d\n", id, config.limits[id].min, config.limits[id].zero, config.limits[id].max, config.limits[id].dir);
 #endif
 }
 

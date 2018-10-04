@@ -14,8 +14,9 @@
 #include "Limits.h"
 #include "Config.h"
 #include "FirmwareReset.h"
-#include "AdminPage.h"
 #include "Servos.h"
+#include "AdminPage.h"
+#include "SetupPage.h"
 
 #define DNS_NAME  SSID_DEFAULT
 #define DNS_URL   "http://" DNS_NAME ".local/"
@@ -74,6 +75,9 @@ void setup() {
 
   // Set up the admin page
   webServer.on("/admin", std::bind(serveAdmin, &webServer));
+
+  // Set up the setup page
+  webServer.on("/setup", std::bind(serveSetup, &webServer));
 
   // Redirect all unknown traffic back to the homepage
   webServer.onNotFound([](){

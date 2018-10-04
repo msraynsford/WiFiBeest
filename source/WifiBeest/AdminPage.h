@@ -29,6 +29,7 @@ void serveAdmin(ESP8266WebServer *webServer) {
     
   // Check to see if we've been sent any arguments and instantly return if not
   if(webServer->args() == 0) {
+    
     webServer->sendHeader("Content-Length", String(strlen(adminPage)));
     webServer->send(200, "text/html", adminPage);
   }
@@ -50,8 +51,8 @@ void serveAdmin(ESP8266WebServer *webServer) {
     message = "New settings will take effect after restart";     
 
     // Reply with a web page to indicate success or failure
-    message = "<html><head><meta http-equiv='refresh' content='5;url=/' /></head><body>" + message;
-    message += "<br/>Redirecting in 5 seconds...</body></html>";
+    message = "<html><head><meta http-equiv='refresh' content='2;url=/' /></head><body>" + message;
+    message += "<br/>Redirecting in 2 seconds...</body></html>";
     webServer->sendHeader("Content-Length", String(message.length()));
     webServer->send(200, "text/html", message);
   } 
